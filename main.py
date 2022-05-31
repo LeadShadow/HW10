@@ -86,7 +86,6 @@ def input_add(*args):
     name = Name(args[0])
     phone = Phone(args[1])
     rec = Record(name, [phone])
-    print(rec)
     ab.add_record(rec)
     return f"Contact {rec.name.value.title()} add successful"
 
@@ -117,7 +116,7 @@ def input_remove(*args):
     rec = ab.data[args[0].title()]
     result = rec.remove_record(phone)
     if result:
-        return f"Phone {phone.value} remove successful"
+        return f"phone {phone.value} remove successful"
 
 
 commands = {
